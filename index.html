@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>24/7 e-Service Portal</title>
+  <style>
+    /* General Styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e9ecef;
+      color: #333;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Section Styling */
+    #services, #contact, #credits {
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 600px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      transition: transform 0.2s;
+    }
+
+    #services:hover, #contact:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Headers */
+    #services h2, #contact h2, #credits p {
+      color: #007bff;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    /* Service Cards */
+    .service-card {
+      margin: 15px 0;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background-color: #f9f9fb;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s, transform 0.2s;
+    }
+
+    .service-card:hover {
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      transform: translateY(-3px);
+    }
+
+    /* Buttons */
+    button, .whatsapp-link {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 24px;
+      color: #fff;
+      background-color: #007bff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    button:hover, .whatsapp-link:hover {
+      background-color: #0056b3;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .whatsapp-link {
+      background-color: #25d366;
+    }
+
+    .whatsapp-link:hover {
+      background-color: #1ebe5d;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Services Section -->
+  <section id="services">
+    <h2>24/7 e-Service Portal</h2>
+    <div class="service-card">
+      <h3>Aadhaar Card</h3>
+      <p>Apply or Update your Aadhaar Card</p>
+      <button onclick="redirectToService('aadhaar')">Go to Aadhaar Service</button>
+    </div>
+    <div class="service-card">
+      <h3>PAN Card</h3>
+      <p>Apply or Update your PAN Card</p>
+      <button onclick="redirectToService('pan')">Go to PAN Service</button>
+    </div>
+    <div class="service-card">
+      <h3>Photography</h3>
+      <p>Professional Photography Services</p>
+      <button onclick="redirectToService('photography')">Explore Photography Services</button>
+    </div>
+    <div class="service-card">
+      <h3>Video Editing</h3>
+      <p>High-quality Video Editing</p>
+      <button onclick="redirectToService('editing')">Explore Editing Services</button>
+    </div>
+    <div class="service-card">
+      <h3>Form Filling</h3>
+      <p>Assistance with Online Form Filling</p>
+      <button onclick="redirectToService('form-filling')">Get Form Filling Help</button>
+    </div>
+  </section>
+
+  <!-- WhatsApp Redirection -->
+<!-- WhatsApp Redirection -->
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>Need help? Reach out to us on WhatsApp.</p>
+  <a href="https://wa.me/917096520833" target="_blank" class="whatsapp-link">Contact on WhatsApp</a>
+</section>
+
+
+  <!-- Credits Section -->
+  <section id="credits">
+    <p>All credits go to Tejash</p>
+  </section>
+
+  <script>
+    // Service Redirects
+    function redirectToService(service) {
+      switch (service) {
+        case 'aadhaar':
+          window.location.href = 'https://uidai.gov.in/';
+          break;
+        case 'pan':
+          window.location.href = 'https://www.onlineservices.nsdl.com/paam/endUserRegisterContact.html';
+          break;
+        case 'photography':
+          window.location.href = 'https://yourphotographyservice.com';
+          break;
+        case 'editing':
+          window.location.href = 'https://youreditingservice.com';
+          break;
+        case 'form-filling':
+          window.location.href = 'https://onlineformfilling.com';
+          break;
+        default:
+          alert('Service not available');
+      }
+    }
+  </script>
+</body>
+</html>
